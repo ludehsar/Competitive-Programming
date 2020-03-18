@@ -58,8 +58,6 @@ inline ll modDiv(ll a, ll b) { return modMul(a, modInverse(b)); }
 
 int main() {
     optimize();
-    vl a(5, (ll) 2e9);
-    ll ans = 5;
-    dbg(a);
+    // ...
     return 0;
 }
