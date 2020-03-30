@@ -1,7 +1,7 @@
 //https://codeforces.com/blog/entry/53170
 ///HLD path query + Euler tour(pre-order traversal) subtree query
 
-const int MAXN = 1e5+5;
+const int MAXN = 1e5+5;	/// max no. of nodes;
 
 int n;	///number of nodes;
 vector<int> adjlist[MAXN];
@@ -19,9 +19,10 @@ No need to clear at the beginning of a test case: sub, head, par, depth, tin, to
 **/
 
 /**
-1. Subtree query(u): [tin[u], tout[u]]
-2. Path query(u, v): [tin[u], tin[v]] (here u and v are of the same chain and depth[u] <= depth[v])
-3. u--v is a heavy edge if and only if depth[u] == depth[v]-1 and adjlist[u][0] = v; Thus u and v are of the same chain;
+1. Position of node u in segment tree is: tin[u];
+2. Subtree query(u): [tin[u], tout[u]]
+3. Path query(u, v): [tin[u], tin[v]] (here u and v are of the same chain and depth[u] <= depth[v])
+4. u--v is a heavy edge if and only if depth[u] == depth[v]-1 and adjlist[u][0] = v; Thus u and v are of the same chain;
 **/
 
 int arr[MAXN];	/// contains the values for the segment tree
@@ -63,11 +64,13 @@ void dfs_sub( int u, int p, int dep ) {
     sub[u] = 1;
     par[u] = p;
     depth[u] = dep;
+    int cur = 0;
     for( auto &v: adjlist[u] ) {
 		if( v == p ) continue;
         dfs_sub(v, u, dep+1);
         sub[u] += sub[v];
-        if(sub[v] > sub[adjlist[u][0]]) {
+        if(sub[v] > cur) {
+	    cur = sub[v];
             swap(v, adjlist[u][0]);
         }
     }
