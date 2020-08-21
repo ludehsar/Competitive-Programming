@@ -1,0 +1,4 @@
+1. 2-SAT
+2. Omar vai's miller rabin correction
+3. https://codeforces.com/blog/entry/3781
+4. Mobius inversion notes is given in .JPEG format. It was not copied into the codebook. So do something about it.
