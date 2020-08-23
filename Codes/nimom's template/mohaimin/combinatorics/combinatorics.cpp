@@ -7,4 +7,5 @@
   1.1 Catn = (1/(n+1))*((2n)Cn)
   1.2 Catn = summation of Cat(k-1)*Catk(n-k) such that 1 <= k <= n
   1.3 Cat(n+1) = ((2*(2n+1))/(n+2)) * Catn
+  1.4 Catn = ((2*(2*(n-1)+1))/((n-1)+2)) * Cat(n-1)
 
