@@ -1,6 +1,8 @@
-/// Original Recurrence: dp[i][j] = min(dp[i-1][k] + C[k][j]) for k < j ( *** C[k+1][j] instead of C[k][j] is also possible )
-/// Sufficient condition: A[i][j] <= A[i][j+1] where A[i][j] = smallest k that gives optimal answer
+/// Original Recurrence: dp[i][j] = min(dp[i-1][k] + C[k][j]) for k < j ( *** C[k+1][j] instead of C[k][j] is also possible; max instead of min is also possible )
+/// Sufficient condition: opt[i][j] <= opt[i][j+1] where opt[i][j] = smallest k that gives optimal answer for dp[i][j]
 /// 1 <= i <= n, 1 <= j <= m
+/// Again, divide and conquer optimization can be applied if it satisfies the following condition: (approved by cgy4ever)
+    1. Quadrangle inequality: C[a][c]+C[b][d] <= C[a][d]+C[b][c], a <= b <= c <= d
 /// Original complexity: O(n*m^2), Optimized complexity: O(n*m*lg(m))
 /// ** 1-based indexing.
 /// the implementation is for min. for max modify the code slightly.
