@@ -94,7 +94,7 @@ int main() {
   cin >> s;
   SA.suffix_array(s);
   SA.range_lcp_init();
-  vector<pair<int,int>> vec;
+  vector<pair<int,int>> sub_string;
   for( int i = 0; i < s.size(); ++i ) {
     for( int j = i; j < s.size(); ++j ) {
       sub_string.PB(MP(i, j));
