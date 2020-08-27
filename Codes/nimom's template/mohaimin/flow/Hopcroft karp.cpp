@@ -1,7 +1,7 @@
 //Complexity: O(sqrt(V) * E), constant may be a bit high.
-//Works on self loops. ( Maybe this algorithm does not work on self-loops. I don't know why I added this comment :| )
-#include <bits/stdc++.h>
-using namespace std;
+//Works on self loops.
+//if( h.R[u] != -1 ) then u is situated in left part, h.R[u] is situated in right part;
+//if( h.L[u] != -1 ) then u is situated in right part, h.L[u] is situated in left part;
 struct Hopcroft_karp {
   int n;
   vector< vector<int> > edge;
@@ -68,17 +68,21 @@ int main() {
   for( int i = 0; i < m; ++i ) {
     int u, v;
     cin >> u >> v;
-    /** //Undirected: //(hopcroft karp in undirected graph is impossible, i dont know why i added this. :| )
+    /** //Undirected:
     h.add_edge(u, v);
     h.add_edge(v, u);
     **/
     //Directed:
     h.add_edge(u, v);
   }
-  int ans = h.matching();  //maximum matching
+  /** //Undirected:
+  int ans = h.matching()/2; //we divide by 2 because incase of undirected graphs matching() returns the number of nodes involved in maximum matching;
+  **/
+  //Directed:
+  int ans = h.matching();
   cout << ans << endl;
   //print the actual maximum matching
   for( int i = 1; i <= n; ++i ) {
-    if( h.L[i] != -1 ) cout << i << " " << h.L[i] << endl;
+    if( h.L[i] != -1 ) cout << h.L[i] << " " << i << endl;
   }
 }
