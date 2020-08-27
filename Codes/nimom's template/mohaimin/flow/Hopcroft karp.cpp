@@ -50,7 +50,7 @@ struct Hopcroft_karp {
     return false;
   }
   int matching() {
-    int counter = 0;  //How many nodes are part of the maximum matching?
+    int counter = 0;
     fill( L.begin(), L.end(), -1 );
     fill( R.begin(), R.end(), -1 );
     while (bfs()) {
