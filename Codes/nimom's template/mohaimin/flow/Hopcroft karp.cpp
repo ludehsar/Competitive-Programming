@@ -1,5 +1,5 @@
 //Complexity: O(sqrt(V) * E), constant may be a bit high.
-//Works on self loops.
+//Works on self loops. ( Maybe this algorithm does not work on self-loops. I don't know why I added this comment :| )
 #include <bits/stdc++.h>
 using namespace std;
 struct Hopcroft_karp {
@@ -75,7 +75,7 @@ int main() {
     //Directed:
     h.add_edge(u, v);
   }
-  int ans = h.matching();  //How many nodes are part of the maximum matching?
+  int ans = h.matching();  //maximum matching
   cout << ans << endl;
   //print the actual maximum matching
   for( int i = 1; i <= n; ++i ) {
