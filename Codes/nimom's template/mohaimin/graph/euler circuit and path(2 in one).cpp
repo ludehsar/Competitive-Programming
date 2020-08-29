@@ -13,7 +13,7 @@
 2. Euler circuit/euler path for directed graph
 /**
   1. The graph -if converted to undirected must be a single component. So, you have to check it.
-  2. in-degree and out-degree of all nodes should be equal. So, check it. But if just 2 nodes have unequal in-degree and out-degree then there will an eulerian path only if and only if one these node(source node to be exact) have out-degree==1+in-degree and the other have in degree==1+out-degree. Choose any of these 2 nodes as source node in that case.
+  2. in-degree and out-degree of all nodes should be equal. So, check it. But if just 2 nodes have unequal in-degree and out-degree then there will an eulerian path only if and only if one these node(source node to be exact) have out-degree==1+in-degree and the other have in degree==1+out-degree.
   3. If node u has a self loop then in-degree[u]++; and out-degree[u]++;
 **/
 vector<pii> gvec[10005]; ///adjacency list; gvec[u] contains pairs (v, id) where v is node and id is the edge no.
