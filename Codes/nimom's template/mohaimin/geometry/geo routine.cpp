@@ -29,7 +29,7 @@ struct PT {
     return x < p.x || (x == p.x && y < p.y);
   }
   bool operator ==(const PT &p) const {
-    return (fabs(x-p.x) <= EPS && fabs(y-p.y) <= EPS);
+    return (abs(x-p.x) <= EPS && abs(y-p.y) <= EPS);
   }
 };
 double dot(PT p, PT q)     { return p.x*q.x+p.y*q.y; }
@@ -68,7 +68,7 @@ PT ProjectPointLine(PT a, PT b, PT c) {
 // project point c onto line segment through a and b
 PT ProjectPointSegment(PT a, PT b, PT c) {
   double r = dot(b-a,b-a);
-  if (fabs(r) < EPS) return a;
+  if (abs(r) < EPS) return a;
   r = dot(c-a, b-a)/r;
   if (r+EPS < 0) return a;
   if (r > 1+EPS) return b;
@@ -81,16 +81,16 @@ double DistancePointSegment(PT a, PT b, PT c) {
 // compute distance between point (x,y,z) and plane ax+by+cz=d
 double DistancePointPlane(double x, double y, double z,
                           double a, double b, double c, double d) {
-  return fabs(a*x+b*y+c*z-d)/sqrt(a*a+b*b+c*c);
+  return abs(a*x+b*y+c*z-d)/sqrt(a*a+b*b+c*c);
 }
 // determine if lines from a to b and c to d are parallel or collinear
 bool LinesParallel(PT a, PT b, PT c, PT d) {
-  return fabs(cross(b-a, c-d)) < EPS;
+  return abs(cross(b-a, c-d)) < EPS;
 }
 bool LinesCollinear(PT a, PT b, PT c, PT d) {
   return LinesParallel(a, b, c, d)
-    && fabs(cross(a-b, a-c)) < EPS
-    && fabs(cross(c-d, c-a)) < EPS;
+    && abs(cross(a-b, a-c)) < EPS
+    && abs(cross(c-d, c-a)) < EPS;
 }
 // determine if line segment from a to b intersects with
 // line segment from c to d
@@ -156,7 +156,7 @@ double ComputeSignedArea(const vector<PT> &p) {
   return area / 2.0;
 }
 double ComputeArea(const vector<PT> &p) {
-  return fabs(ComputeSignedArea(p));
+  return abs(ComputeSignedArea(p));
 }
 PT ComputeCentroid(const vector<PT> &p) {
   PT c(0,0);
