@@ -5,9 +5,9 @@ double INF = 1e100;
 double EPS = 1e-12;
 struct PT {
   PT () {}
-  double x, y;
+  double x, y; ///take int/long long as necessary
   int id;
-  PT(double x_, double y_, int id_) : x(x_), y(y_), id(id_) {}
+  PT(double x_, double y_, int id_) : x(x_), y(y_), id(id_) {} ///take int/long long as necessary
 };
 struct cmp_x {
   bool operator()(const PT & a, const PT & b) const {
