@@ -30,7 +30,7 @@ ll expo( ll b, ll power, ll m ) {
 }
 
 //solves x*x == a (mod p); [Here, p is prime. We find a possible value of x.]
-int solvequadratic(int a, int p) {
+ll solvequadratic(ll a, ll p) {
   if(p == 2) {
     if(a&1) return 1;
     return 0;
@@ -40,19 +40,19 @@ int solvequadratic(int a, int p) {
   if(a == 0) return 0;
   if(expo(a,(p-1)/2,p) != 1) return -1;
 
-  int n = 0, k = p-1;
+  ll n = 0, k = p-1;
   while(k % 2 == 0) k/=2, n++;
-  int q = 2;
+  ll q = 2;
   while(expo(q,(p-1)/2,p) != (p-1)) q++;
-  int t = expo(a,(k+1)/2,p);
-  int r = expo(a,k,p);
+  ll t = expo(a,(k+1)/2,p);
+  ll r = expo(a,k,p);
   while(true) {
-    int s = 1;
-    int i = 0;
+    ll s = 1;
+    ll i = 0;
     while(expo(r,s,p) != 1) i+=1, s*=2;
     if(i == 0) return t;
-    int e = 1<<(n-i-1);
-    int u = expo(q, k*e,p);
+    ll e = 1LL<<(n-i-1);
+    ll u = expo(q, k*e,p);
     t = ((long long)t*u)%p;
     r = ((long long)r*u*u)%p;
   }
