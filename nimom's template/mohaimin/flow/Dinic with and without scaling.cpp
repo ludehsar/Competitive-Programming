@@ -40,7 +40,7 @@ using namespace std;
 template <class flow_t> struct Dinic { //int/long long;
   const static bool SCALING = true; // non-scaling = V^2E, Scaling=VElog(U) with higher constant
   long long lim = 1;
-  const flow_t INF = numeric_limits<flow_t>::max();
+  const flow_t INF = numeric_limits<flow_t>::max(); //reduce this a bit to avoid overflow maybe?
   flow_t K;
   bool K2 = false;
   struct edge {
@@ -134,6 +134,8 @@ int main() {
     }
     //fl.flow_limit(10);  //non-maxflow upto a specific value;
     cout << fl.max_flow(s, t) << endl;
+    
+    ///Actual flow
     vector<pair<pair<int,int>,long long>> vec = fl.getActualFlow();
     cout << vec.size() << endl;
     for( auto xx : vec ) {

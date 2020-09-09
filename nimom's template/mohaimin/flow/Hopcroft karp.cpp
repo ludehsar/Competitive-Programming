@@ -7,7 +7,7 @@ struct Hopcroft_karp {
   vector< vector<int> > edge;
   vector<int> dis, parent, L, R;
   vector<int> Q;
-  Hopcroft_karp(int n_) : n(n_), edge(n_+1), dis(n_+1), parent(n_+1), L(n_+1), R(n_+1), Q(n_+1) {};
+  Hopcroft_karp(int n_) : n(n_), edge(n_+1), dis(n_+1), parent(n_+1), L(n_+1), R(n_+1), Q( ((n_+1)*10)+1 ) {};
   void add_edge( int u, int v ) {
     edge[u].push_back(v);
   }
