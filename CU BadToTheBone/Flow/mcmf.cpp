@@ -3,7 +3,7 @@ namespace mcmf {
     const ll INF = 1LL << 60;
 
     ll cap[MAX], flow[MAX], cost[MAX], dist[MAX];
-    int n, m, s, t, Q[1000010], adj[MAX], link[MAX], last[MAX], from[MAX], visited[MAX];
+    int n, m, s, t, Q[10000010], adj[MAX], link[MAX], last[MAX], from[MAX], visited[MAX];
 
     void init(int nodes, int source, int sink) {
         m = 0, n = nodes, s = source, t = sink;
