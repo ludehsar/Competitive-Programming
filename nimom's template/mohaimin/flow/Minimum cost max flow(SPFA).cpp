@@ -1,4 +1,5 @@
 /// Works on directed and undirected graphs;
+/// Works on directed + undirected graphs. i.e. mixed graphs;
 /// Whether or not it works on multi-edge or self-loop graphs is yet to be verified;
 /// can find non-maxflow-mincost, can find actual mincost-flow;
 /// Operates on integers. to use it for doubles just change the data-type from long long/int to double accordingly. Its easy.

@@ -4,6 +4,8 @@
    calculates determinant, rank and ans[] -> value for variables
    returns {0, 1, INF} -> number of solutions
    gives truely row echelon form.(sort of Identity matrixish, but the independent column/variables may have non-zero values at the upper rows.)
+   Complexity: O(min(n, m) * n * m / 32)
+   It's actually O(min(n, m) * n * MAX / 32) because of the implementation since C++ bitset needs to be of constant size
 */
 
 const double EPS = 1e-9;
