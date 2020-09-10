@@ -10,29 +10,29 @@ Here, we will be submitting the codes in hpp format (so that we can include othe
 
 We will arrange the code according to the following folder structure:
 
-1. AdHoc
-    * Josephus
-2. Combinatorics
-3. DataStructure
+1. adhoc
+    * josephus
+2. combinatorics
+3. dataStructure
     * FenwickTree
-    * OrderedSet
-    * SegmentTree
-    * SparseTable
-4. DynamicProgramming
-5. FFT
-6. Flow
-7. Geometry
-    * HalfPlanner
-8. Graph
-    * Dijkstra
-    * HLD
-    * LCA
-9. Math
-10. NumberTheory
-11. Numerical
-    * Interpolation
-12. String
-    * AhoCorasick
-    * Hashing
-    * KMP
-    * SuffixArray
+    * ordered_set
+    * segment_tree
+    * sparse_table
+4. dynamic_programming
+5. fft
+6. flow
+7. geometry
+    * half_planner
+8. graph
+    * dijkstra
+    * hld
+    * lca
+9. math
+10. number_theory
+11. numerical
+    * interpolation
+12. string
+    * aho_corasick
+    * double_hashing
+    * kmp
+    * suffix_array
