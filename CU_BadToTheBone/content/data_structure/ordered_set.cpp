@@ -46,6 +46,5 @@ int main() {
   omst.insert({1, 2});
   omst.insert({2, 3});
   omst.insert({2, 4});
-  cout << omst.order_of_key({1, 200}) << endl; // 2
   cout << sz(omst) - omst.order_of_key({1, 200}) << endl; // 2
 }
