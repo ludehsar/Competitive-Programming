@@ -1,0 +1,3 @@
+[submodule "algovault"]
+	path = algovault
+	url = https://github.com/sgtlaugh/algovault.git
