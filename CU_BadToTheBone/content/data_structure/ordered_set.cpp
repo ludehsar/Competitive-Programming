@@ -25,7 +25,6 @@ int main() {
   // find_by_order(x) returns the element in position x
   cout << *ost.find_by_order(1) << endl; // 3
   cout << *ost.find_by_order(2) << endl; // 5
-  cout << *ost.find_by_order(10) << endl; // 0
 
   // order_of_key(x) returns the relative position of x in the set/multiset.
   cout << ost.order_of_key(4) << endl; // 2
