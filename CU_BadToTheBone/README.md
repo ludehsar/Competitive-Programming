@@ -10,7 +10,7 @@ Here, we will be submitting the codes in hpp format (so that we can include othe
 
 We will arrange the code according to the following folder structure:
 
-1. AdHocs
+1. AdHoc
     * Josephus
 2. Combinatorics
 3. DataStructure
@@ -33,6 +33,6 @@ We will arrange the code according to the following folder structure:
     * Interpolation
 12. String
     * AhoCorasick
-    * Hash
+    * Hashing
     * KMP
     * SuffixArray

@@ -44,35 +44,3 @@ inline ll modSub(ll a, ll b) { a %= MOD; b %= MOD; normal(a); normal(b); a -= b;
 inline ll modPow(ll b, ll p) { ll r = 1LL; while (p) { if (p & 1) r = modMul(r, b); b = modMul(b, b); p >>= 1; } return r; }
 inline ll modInverse(ll a) { return modPow(a, MOD - 2); }
 inline ll modDiv(ll a, ll b) { return modMul(a, modInverse(b)); }
-
-int main() {
-    optimize();
-    // ...
-    return 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
