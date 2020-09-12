@@ -13,26 +13,26 @@ We will arrange the code according to the following folder structure:
 1. adhoc
     * josephus
 2. combinatorics
-3. dataStructure
-    * FenwickTree
-    * ordered_set
-    * segment_tree
-    * sparse_table
-4. dynamic_programming
+3. data-tructure
+    * fenwick-tree
+    * ordered-set
+    * segment-tree
+    * sparse-table
+4. dynamic-programming
 5. fft
 6. flow
 7. geometry
-    * half_planner
+    * half-planner
 8. graph
     * dijkstra
     * hld
     * lca
 9. math
-10. number_theory
+10. number-theory
 11. numerical
     * interpolation
 12. string
-    * aho_corasick
-    * double_hashing
+    * aho-corasick
+    * double-hashing
     * kmp
-    * suffix_array
+    * suffix-array
