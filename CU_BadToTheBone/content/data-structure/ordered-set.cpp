@@ -6,8 +6,6 @@
  * In order to declare a multiset, you should declare a variable of type ordered_set< array<int, 2> >.
  */
 
-#include "../utility/template.cpp"
-
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
 
