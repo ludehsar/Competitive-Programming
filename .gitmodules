@@ -1,3 +1,6 @@
 [submodule "kactl"]
 	path = kactl
 	url = https://github.com/kth-competitive-programming/kactl.git
+[submodule "algovault"]
+	path = algovault
+	url = https://github.com/sgtlaugh/algovault.git
